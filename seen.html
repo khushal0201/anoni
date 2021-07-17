@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Your NAMe
+        </title>
+    </head>
+    <script>
+        window.onload=function(e){
+            var c=0;
+            var org=""
+            document.getElementById("sub").addEventListener("click",function(e){
+              alert(e)
+              if(document.getElementById("nn").value==""||document.getElementById("nn").value==null){
+                  alert("idiot fill first")
+                  return;
+              }   
+              else{
+                  org=document.getElementsByTagName("h1")[0].innerHTML
+                  document.getElementsByTagName("h1")[0].innerHTML="Hiii MR/MS."+document.getElementById("nn").value;
+                  c=1;
+                  
+                }
+            
+
+            });
+            document.getElementById("clr").addEventListener("click",function(e){
+              alert(e)
+              if(c==0){
+                  alert("Nothing to be cleared")
+                  return;
+              }   
+              else{
+                  document.getElementsByTagName("h1")[0].innerHTML=org;
+                  c=0
+                  document.getElementById("nn").value=""
+              }
+            
+
+            });
+        }
+    </script>
+    <body>
+        <h1 align="center">HEy Bud</h1>
+        <br><br>
+        <label for="nn">Enter Your Name</label>
+        <input type="text" placeholder="Your Name" name="nn" id="nn">
+        <input type="button" value="Sub" id="sub">
+        <input type="button" value="clear" id="clr">
+    </body>
+</html>
