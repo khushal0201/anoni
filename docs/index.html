@@ -2,8 +2,25 @@
 <html>
    <head>
       <title>The website</title>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==' crossorigin='anonymous'></script>
    </head>
+   <script>
+       $(document).ready(()=>{
+           $.ajax({
+             url:"127.0.0.1:3000/find/rajes",
+             type:"get",
+             success:(message)=>{
+                 $("#sucha").html(message)
+             }
+              
+              
+           })
+       })
+   </script>
    <body bgcolor="green">
       <h1 style='color:blue'>Some Things Comming</h1>
+      
+      <div id="sucha">
+      </div>
   </body>
 </html>
